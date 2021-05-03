@@ -1,0 +1,36 @@
+.portifolioPageRoot {
+	width: 60vw;
+	margin: auto;
+
+	padding: 100px 0;
+
+	> h1 {
+		padding: 80px 0;
+		text-align: center;
+	}
+
+	> div {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+
+		> :nth-child(2n) {
+			transform: translateY(5rem);
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.portifolioPageRoot {
+		width: 100vw;
+		padding: 0 1rem;
+
+		> div {
+			flex-direction: column;
+
+			> :nth-child(2n) {
+				transform: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+.homeLandingAnimationRoot {
+	margin: 0 auto;
+
+	svg {
+		#right-code {
+			#Rectangle24 {
+				animation: right-code 5s infinite reverse;
+				animation-delay: 0s;
+			}
+			#Rectangle25 {
+				animation: right-code 5s infinite reverse;
+				animation-delay: 3s;
+			}
+			#Rectangle26 {
+				animation: right-code 5s infinite reverse;
+				animation-delay: 2s;
+			}
+		}
+
+		#left-code {
+			#Rectangle27 {
+				animation: right-code 5s infinite reverse;
+				animation-delay: 5s;
+			}
+			#Rectangle28 {
+				animation: right-code 5s infinite reverse;
+				animation-delay: 1s;
+			}
+			#Rectangle29 {
+				animation: right-code 5s infinite reverse;
+				animation-delay: 2.5s;
+			}
+		}
+	}
+}
+
+@keyframes right-code {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.homeLandingAnimationRoot {
+		margin: 0 auto;
+		svg {
+			width: 80vw;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+}

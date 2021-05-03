@@ -1,0 +1,20 @@
+.topBarRoot {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	padding: 20px 20px;
+	color: var(--terciary);
+
+	.topBarIcon {
+
+		cursor: pointer;
+		transition: transform 0.3s;
+		margin: 0px 5px;
+
+		&:hover {
+			transform: rotateY(360deg);
+		}
+		transition: transform 0.2s;
+	}
+}
