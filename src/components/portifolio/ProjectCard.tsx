@@ -1,23 +1,23 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 import styles from "./projectcard.module.scss";
 
-const ProjectCard = ({ title, description, backgroundImagePath, techList, color }) => {
+const ProjectCard = ({ title, description, backgroundImagePath, techList, color, id }) => {
 
 	const cardButtonColors = {
 		red: "#bf3030",
 		green: "#55bf30",
 		blue: "#3166c9",
 		brown: "#c7782e"
-	}
+	};
 
 	const cardColors = {
 		red: "#681919",
 		green: "#2f6b19",
 		blue: "#173263",
 		brown: "#613a15"
-	}
+	};
 
 	return (
 		<div className={styles.projectCardRoot}>
@@ -31,7 +31,6 @@ const ProjectCard = ({ title, description, backgroundImagePath, techList, color 
 						<p>{description}</p>
 					</div>
 				</div>
-				{/* <div className={`card-back ${color}`}> */}
 				<div style={{ backgroundColor: cardButtonColors[color] }} className={styles.cardBack}>
 					<p>Details</p>
 					<div>
@@ -44,9 +43,9 @@ const ProjectCard = ({ title, description, backgroundImagePath, techList, color 
 							})}
 						</section>
 					</div>
-					{/* <Link to="/project"> */}
-					<span style={{ backgroundColor: cardColors[color] }} className={styles.seeMoreButton}>See more !</span>
-					{/* </Link> */}
+					<Link href={`/projects/${id}`}>
+						<span style={{ backgroundColor: cardColors[color] }} className={styles.seeMoreButton}>See more !</span>
+					</Link>
 				</div>
 			</div>
 		</div>

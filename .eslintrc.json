@@ -38,6 +38,7 @@
             "error",
             "always"
         ],
-        "@typescript-eslint/no-var-requires": 0
+        "@typescript-eslint/no-var-requires": 0,
+        "react/prop-types": 0 // Not using prop-types because we have TypeScript
     }
 }

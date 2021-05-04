@@ -10,15 +10,15 @@ const HomeLandingAnimation: React.FC = () => {
 		<div className={styles.homeLandingAnimationRoot}>
 			<svg width="551" height="266" viewBox="0 0 551 266" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g id="Group 23">
-					<g id="right-code">
-						<rect id="Rectangle24" x="390.464" y="91.2798" width="160.536" height="12.2899" rx="6.14493" fill="#211107" />
-						<rect id="Rectangle25" x="390.464" y="112.787" width="89.8696" height="12.2899" rx="6.14493" fill="#785819" />
-						<rect id="Rectangle26" x="390.464" y="134.294" width="105.232" height="12.2899" rx="6.14493" fill="#6C6C6C" />
+					<g className={styles.rightCode}>
+						<rect className={styles.rectangle24} id="Rectangle24" x="390.464" y="91.2798" width="160.536" height="12.2899" rx="6.14493" fill="#211107" />
+						<rect className={styles.rectangle25} x="390.464" y="112.787" width="89.8696" height="12.2899" rx="6.14493" fill="#785819" />
+						<rect className={styles.rectangle26} x="390.464" y="134.294" width="105.232" height="12.2899" rx="6.14493" fill="#6C6C6C" />
 					</g>
-					<g id="left-code">
-						<rect id="Rectangle27" y="210" width="160.536" height="12.2899" rx="6.14493" fill="#016298" />
-						<rect id="Rectangle28" y="231.507" width="160.536" height="12.2899" rx="6.14493" fill="#D2C9C9" />
-						<rect id="Rectangle29" y="253.015" width="105.232" height="12.2899" rx="6.14493" fill="#2D8080" />
+					<g className={styles.leftCode}>
+						<rect className={styles.rectangle27} y="210" width="160.536" height="12.2899" rx="6.14493" fill="#016298" />
+						<rect className={styles.rectangle28} y="231.507" width="160.536" height="12.2899" rx="6.14493" fill="#D2C9C9" />
+						<rect className={styles.rectangle29} y="253.015" width="105.232" height="12.2899" rx="6.14493" fill="#2D8080" />
 					</g>
 					<g id="g1595">
 						<path id="path1064" d="M302.889 109.967C299.759 116.017 294.561 120.741 288.241 123.278C284.51 124.638 280.583 125.385 276.613 125.488C272.278 125.686 267.853 125.405 263.779 123.923C258.313 121.943 253.773 117.894 250.37 113.173C246.966 108.453 244.623 103.062 242.586 97.6264C241.513 94.7968 240.492 91.782 240.996 88.7926C244.285 88.0453 247.886 86.9467 249.584 84.0276C250.128 83.4019 255.828 81.9771 255.044 79.0718C254.555 77.2568 252.834 71.6982 253.583 70.807C266.367 55.6053 266.504 50.3181 285.535 69.4163C286.518 72.5397 287.621 76.4394 289.99 78.6558C291.836 80.3868 294.186 81.4727 296.484 82.5266L302.142 85.1199C303.148 85.4968 304.061 86.0873 304.817 86.8509C305.557 87.8681 305.999 89.0713 306.094 90.3256C307.108 97.047 305.987 103.917 302.889 109.967H302.889Z" fill="#FBBEBE" />

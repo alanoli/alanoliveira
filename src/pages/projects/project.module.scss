@@ -1,0 +1,110 @@
+.projectPageRoot {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+
+	nav {
+		height: 5rem;
+		background: var(--primary);
+
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+
+		box-shadow: 0px 4px 4px rgb(112, 112, 112);
+
+		div {
+			border-radius: 10px;
+			background-color: var(--blue);
+			padding: 0.5rem 2rem;
+
+			box-shadow: 0px 4px 4px rgb(151, 151, 151);
+			
+			display: flex;
+			align-items: center;
+			
+			h1,
+			svg {
+				color: var(--gray-800);
+			}
+
+			h1 {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	> div {
+		flex: auto;
+		width: 100%;
+
+		padding: 2rem;
+
+		display: flex;
+		flex-direction: column;
+
+		.gifContainer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			margin: 1rem 0;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
+		}
+
+		.descriptionContainer {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			p {
+				text-align: left;
+			}
+
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: wrap;
+
+				padding: 1rem;
+				margin: 1rem 0;
+				
+				span {
+					color: var(--white);
+					background: #444444;
+					padding: 0.5rem 1rem;
+					border-radius: 0.6rem;
+					margin-right: 1rem;
+					margin-top: 1rem;
+				}
+			}
+			
+			span {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 1rem;
+				
+				div {
+					padding: 0.5rem 1rem;
+					border: 1px solid var(--gray-200);
+					border-radius: 1rem;
+					
+					svg {
+						margin-right: 0.5rem;
+					}
+
+					&:first-child {
+						background: var(--blue);
+					}
+				}
+			}
+		}
+	}
+}
