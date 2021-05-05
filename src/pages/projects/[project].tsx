@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import React from "react";
 import Head from "next/head";
-import Link from 'next/link';
+import Link from "next/link";
 
 import { projectList } from "../../assets/projects";
 
