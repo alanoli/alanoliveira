@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
 				<HomeLandingAnimation />
 				<div className={styles.bottomLearnMore}>
 					<p>Learn more about what I do</p>
-					<ExpandMoreIcon className="expand-icon" />
+					<ExpandMoreIcon className={styles.expandIcon} />
 				</div>
 			</div>
 		</div>

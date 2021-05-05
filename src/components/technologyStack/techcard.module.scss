@@ -25,13 +25,17 @@
 		color: white;
 
 		h2, p {
-			margin: 0;
 			text-align: center;
+			margin: 0;
 		}
-
+		
 		> h2 {
 			padding-top: 25px;
 			padding-bottom: 50px;
+		}
+
+		p {
+			margin-bottom: 0.5rem;
 		}
 
 		.glass {

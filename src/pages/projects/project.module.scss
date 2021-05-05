@@ -3,26 +3,33 @@
 	flex-direction: column;
 	width: 100vw;
 
+	font-family: 'Roboto', sans-serif;
+
 	nav {
 		height: 5rem;
-		background: var(--primary);
+		// background: var(--quaternary);
+		border-bottom: solid 1px var(--gray-200);
+
+		&:hover {
+			cursor: default;
+		}
 
 		padding: 2rem;
 		display: flex;
 		align-items: center;
 
-		box-shadow: 0px 4px 4px rgb(112, 112, 112);
+		// box-shadow: 0px 4px 4px rgb(112, 112, 112);
 
-		div {
+		button {
 			border-radius: 10px;
 			background-color: var(--blue);
 			padding: 0.5rem 2rem;
 
 			box-shadow: 0px 4px 4px rgb(151, 151, 151);
-			
+
 			display: flex;
 			align-items: center;
-			
+
 			h1,
 			svg {
 				color: var(--gray-800);
@@ -74,7 +81,7 @@
 
 				padding: 1rem;
 				margin: 1rem 0;
-				
+
 				span {
 					color: var(--white);
 					background: #444444;
@@ -84,18 +91,22 @@
 					margin-top: 1rem;
 				}
 			}
-			
+
 			span {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				gap: 1rem;
-				
-				div {
+
+				button {
 					padding: 0.5rem 1rem;
-					border: 1px solid var(--gray-200);
 					border-radius: 1rem;
-					
+					box-shadow: 0px 4px 4px rgb(151, 151, 151);
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
 					svg {
 						margin-right: 0.5rem;
 					}
@@ -104,6 +115,67 @@
 						background: var(--blue);
 					}
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.projectPageRoot {
+		height: calc(100vh - 5rem);
+
+		nav {
+			cursor: pointer;
+		}
+
+		> div {
+			flex-direction: row;
+			gap: 2rem;
+
+			width: 80%;
+			height: 100%;
+			margin: auto;
+			position: relative;
+
+			padding: 7rem;
+			padding-top: 12rem;
+
+			h1 {
+				position: absolute;
+				font-size: 2rem;
+				top: 5rem;
+			}
+
+			.gifContainer {
+				margin: 0;
+				min-height: 100%;
+
+				img {
+					width: auto;
+					height: 95%;
+				}
+
+				flex: 3;
+
+				box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+				border-radius: 20px;
+				background-color: var(--white);
+			}
+
+			.descriptionContainer {
+				min-height: 100%;
+				flex: 2;
+				justify-content: space-between;
+
+				padding: 3rem;
+
+				p {
+					font-size: 1.5rem;
+				}
+
+				background-color: var(--white);
+				border-radius: 20px;
+				box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 			}
 		}
 	}

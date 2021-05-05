@@ -17,7 +17,7 @@ const TechCard: React.FC<TechCardProps> = ({ cardTitle, techSkillsList, srcLogo 
 				<h2>{cardTitle}</h2>
 				{
 					techSkillsList.map((item, i) => {
-						return <p key={i} className="skill-text">{item}</p>;
+						return <p key={i}>{item}</p>;
 					})
 				}
 				{/* <img src={Glass} alt="" className="glass" /> */}

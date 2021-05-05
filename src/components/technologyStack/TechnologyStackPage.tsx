@@ -4,25 +4,25 @@ import TechCard from "../../components/technologyStack/TechCard";
 
 import styles from "./techStackPage.module.scss";
 
-const TechnologyStackPage = () => {
+const TechnologyStackPage: React.FC = () => {
 	return (
 		<div className={styles.technologyStackRoot}>
 			<h1>Technologies</h1>
 			<div>
 				<TechCard
-					cardTitle={"Databases"}
-					techSkillsList={["MS SQL", "Postgres"]}
-					srcLogo={"/sqlserver_art.png"}
+					cardTitle={"Frontend"}
+					techSkillsList={["React", "NextJS", "HTML5", "CSS3"]}
+					srcLogo={"/next_art.png"}
 				/>
 				<TechCard
 					cardTitle={"Backend"}
-					techSkillsList={["NodeJS", "Express"]}
+					techSkillsList={["NodeJS", "Express", ".NET Core", "REST APIs"]}
 					srcLogo={"/nodejs_art.png"}
 				/>
 				<TechCard
-					cardTitle={"Frontend"}
-					techSkillsList={["React", "HTML5", "CSS3"]}
-					srcLogo={"/react_art.png"}
+					cardTitle={"Databases"}
+					techSkillsList={["MS SQL", "Postgres"]}
+					srcLogo={"/sqlserver_art.png"}
 				/>
 			</div>
 		</div>

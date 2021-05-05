@@ -20,6 +20,7 @@ const PortfolioPage: React.FC = () => {
 							id={item.id}
 							title={item.title}
 							description={item.description}
+							shortDescription={item.shortDescription}
 							techList={item.techList}
 							color={item.color}
 							backgroundImagePath={item.backgroundImagePath}
@@ -27,10 +28,10 @@ const PortfolioPage: React.FC = () => {
 					);
 				})}
 			</div>
-			<span>
+			{/* <span>
 				<a>Complete portfolio</a>
 				<RightArrowIcon />
-			</span>
+			</span> */}
 		</div>
 	);
 };

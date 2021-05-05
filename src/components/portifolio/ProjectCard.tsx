@@ -3,7 +3,25 @@ import Link from 'next/link';
 
 import styles from "./projectcard.module.scss";
 
-const ProjectCard = ({ title, description, backgroundImagePath, techList, color, id }) => {
+type ProjectCardProps = {
+	title: string
+	description: string
+	backgroundImagePath: string
+	techList: string[]
+	color: string
+	id: string
+	shortDescription: string
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
+	title,
+	description,
+	backgroundImagePath,
+	techList,
+	color,
+	id,
+	shortDescription
+}) => {
 
 	const cardButtonColors = {
 		red: "#bf3030",
@@ -28,7 +46,7 @@ const ProjectCard = ({ title, description, backgroundImagePath, techList, color,
 						<h2>{title}</h2>
 					</div>
 					<div className={styles.bodyContainer}>
-						<p>{description}</p>
+						<p>{shortDescription}</p>
 					</div>
 				</div>
 				<div style={{ backgroundColor: cardButtonColors[color] }} className={styles.cardBack}>

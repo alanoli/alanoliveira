@@ -36,10 +36,10 @@ const ProjectPage: React.FC<ProjectProps> = ({
 			<section className={styles.projectPageRoot}>
 				<nav>
 					<Link href="/">
-						<div>
+						<button>
 							<ArrowBackIcon />
 							<h1>Portfolio</h1>
-						</div>
+						</button>
 					</Link>
 				</nav>
 				<div>
@@ -57,8 +57,8 @@ const ProjectPage: React.FC<ProjectProps> = ({
 							})}
 						</div>
 						<span>
-							<div onClick={() => window.open(sourceCodeUrl, "_blank")}><GitHubIcon />Source Code</div>
-							<div onClick={() => window.open(linkUrl, "_blank")}><LinkIcon />Project URL</div>
+							<button onClick={() => window.open(sourceCodeUrl, "_blank")}><GitHubIcon />Source Code</button>
+							<button onClick={() => window.open(linkUrl, "_blank")}><LinkIcon />Project URL</button>
 						</span>
 					</section>
 				</div>
@@ -72,7 +72,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		paths: [
 			{ params: { project: "mrgelado" } },
 			{ params: { project: "tricacau" } },
-			{ params: { project: "gabrielamuniz" } },
+			{ params: { project: "podcastr" } },
 			{ params: { project: "bethehero" } }
 		],
 		fallback: false
