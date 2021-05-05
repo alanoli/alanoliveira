@@ -1,7 +1,4 @@
-import React from "react";
-// import Head from "next/head";
-// import Image from "next/image";
-import styles from "./home.module.css";
+import React, { useRef } from "react";
 
 import HomePage from "../components/home/HomePage";
 import TechnologyStackPage from "../components/technologyStack/TechnologyStackPage";
@@ -10,10 +7,13 @@ import AboutPage from "../components/about/AboutPage";
 import FooterPage from "../components/footer/FooterPage";
 
 const Home: React.FC = () => {
+
+	const scrollToRef = useRef(null);
+
 	return (
 		<>
-			<HomePage />
-			<TechnologyStackPage />
+			<HomePage onClickRef={() => scrollToRef.current.scrollIntoView({ behavior: "smooth" })} />
+			<TechnologyStackPage scrollToRef={scrollToRef} />
 			<PortfolioPage />
 			<AboutPage />
 			<FooterPage />

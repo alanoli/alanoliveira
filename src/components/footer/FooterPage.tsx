@@ -26,10 +26,10 @@ const FooterPage: React.FC = () => {
 					<div className={styles.divisionLine} />
 				</section>
 				<div className={styles.contacsList}>
-					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")}><WhatsAppLogo /></div>
-					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")}><LinkedInLogo /></div>
-					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")}><GithubLogo /></div>
-					<div onClick={() => copyToClipboard("Email copied!", SOCIAL_MEDIA_LINKS.email)}><MailLogo /></div>
+					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")}><WhatsAppLogo className={styles.wppIcon} /></div>
+					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")}><LinkedInLogo className={styles.linkedInIcon} /></div>
+					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")}><GithubLogo className={styles.githubIcon} /></div>
+					<div onClick={() => copyToClipboard("Email copied!", SOCIAL_MEDIA_LINKS.email)}><MailLogo className={styles.githubIcon} /></div>
 				</div>
 				<p className="footer-ref">Alan Oliveira @ 2021</p>
 			</div>

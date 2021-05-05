@@ -2,8 +2,6 @@ import React from "react";
 
 import styles from "./techcard.module.scss";
 
-// import Glass from "../../assets/glass.svg";
-
 interface TechCardProps {
 	cardTitle: string
 	techSkillsList: string[]
@@ -20,7 +18,7 @@ const TechCard: React.FC<TechCardProps> = ({ cardTitle, techSkillsList, srcLogo 
 						return <p key={i}>{item}</p>;
 					})
 				}
-				{/* <img src={Glass} alt="" className="glass" /> */}
+				<img src="/glass.png" alt="" className={styles.glass} />
 			</div>
 			<div className={styles.bottomDiv}>
 				<img src={srcLogo} alt="" />

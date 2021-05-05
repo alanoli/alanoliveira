@@ -1,7 +1,7 @@
 import React from "react";
 
 import ProjectCard from "./ProjectCard";
-import RightArrowIcon from "@material-ui/icons/ArrowForward";
+// import RightArrowIcon from "@material-ui/icons/ArrowForward";
 
 import { projectList } from "../../assets/projects";
 

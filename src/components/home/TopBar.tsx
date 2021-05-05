@@ -21,9 +21,9 @@ const TopBar: React.FC = () => {
 	return (
 		<>
 			<div className={styles.topBarRoot}>
-				<WhatsAppLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")} className={styles.topBarIcon} />
-				<LinkedInLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")} className={styles.topBarIcon} />
-				<GithubLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")} className={styles.topBarIcon} />
+				<WhatsAppLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")} className={styles.topBarIcon + " " + styles.wppIcon} />
+				<LinkedInLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")} className={styles.topBarIcon + " " + styles.linkedInIcon} />
+				<GithubLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")} className={styles.topBarIcon + " " + styles.githubIcon} />
 				<MailLogo onClick={() => copyToClipboard("Email copied!", SOCIAL_MEDIA_LINKS.email)} className={styles.topBarIcon} />
 			</div>
 			<CopiedToast />

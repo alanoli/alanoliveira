@@ -4,9 +4,13 @@ import TechCard from "../../components/technologyStack/TechCard";
 
 import styles from "./techStackPage.module.scss";
 
-const TechnologyStackPage: React.FC = () => {
+type TechnologyStackPageProps = {
+	scrollToRef: React.MutableRefObject<any>
+}
+
+const TechnologyStackPage: React.FC<TechnologyStackPageProps> = ({ scrollToRef }) => {
 	return (
-		<div className={styles.technologyStackRoot}>
+		<div ref={scrollToRef} className={styles.technologyStackRoot}>
 			<h1>Technologies</h1>
 			<div>
 				<TechCard

@@ -13,7 +13,7 @@ export const projectList = [
 		],
 		"color": "red",
 		"backgroundImagePath": "/project_header_div_red.svg",
-		"projectGif": "/mrgelado.gif",
+		"projectGif": "/tricacau.gif",
 		"sourceCodeUrl": "",
 		"linkUrl": ""
 	},
@@ -47,7 +47,7 @@ export const projectList = [
 		],
 		"color": "blue",
 		"backgroundImagePath": "/project_header_div_blue.svg",
-		"projectGif": "/mrgelado.gif",
+		"projectGif": "/podcastr.gif",
 		"sourceCodeUrl": "",
 		"linkUrl": ""
 	},
@@ -63,7 +63,7 @@ export const projectList = [
 		],
 		"color": "brown",
 		"backgroundImagePath": "/project_header_div_brown.svg",
-		"projectGif": "/mrgelado.gif",
+		"projectGif": "/bethehero.gif",
 		"sourceCodeUrl": "",
 		"linkUrl": ""
 	}
