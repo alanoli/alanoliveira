@@ -9,14 +9,25 @@ import MailLogo from "@material-ui/icons/Mail";
 
 import styles from "./topbar.module.scss";
 
+import { useCopyToClipboard } from "../../utils/hooks";
+
 const TopBar: React.FC = () => {
+
+	const {
+		copyToClipboard,
+		CopiedToast
+	} = useCopyToClipboard();
+
 	return (
-		<div className={styles.topBarRoot}>
-			<WhatsAppLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")} className={styles.topBarIcon} />
-			<LinkedInLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")} className={styles.topBarIcon} />
-			<GithubLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")} className={styles.topBarIcon} />
-			<MailLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.email, "_blanck")} className={styles.topBarIcon} />
-		</div>
+		<>
+			<div className={styles.topBarRoot}>
+				<WhatsAppLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")} className={styles.topBarIcon} />
+				<LinkedInLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")} className={styles.topBarIcon} />
+				<GithubLogo onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")} className={styles.topBarIcon} />
+				<MailLogo onClick={() => copyToClipboard("Email copied!", SOCIAL_MEDIA_LINKS.email)} className={styles.topBarIcon} />
+			</div>
+			<CopiedToast />
+		</>
 	);
 };
 
