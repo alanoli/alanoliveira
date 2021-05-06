@@ -1,5 +1,5 @@
 .projectCardRoot {
-	width: 200px;
+	min-width: 200px;
 	height: 350px;
 	background-color: transparent;
 	perspective: 30rem;
@@ -136,8 +136,9 @@
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
 	.projectCardRoot {
 		margin-bottom: 3rem;
+		min-width: 200px;
 	}
 }

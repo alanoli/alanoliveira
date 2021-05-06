@@ -11,8 +11,8 @@ const PortfolioPage: React.FC = () => {
 
 	return (
 		<div className={styles.portifolioPageRoot}>
-			<h1 className="page-title">Portifolio</h1>
-			<div className="portifolio-item-list">
+			<h1>Portifolio</h1>
+			<div>
 				{projectList.map((item, i) => {
 					return (
 						<ProjectCard
