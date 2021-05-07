@@ -13,6 +13,8 @@
 		display: flex;
 		gap: 1rem;
 
+		padding: 3rem 0;
+
 		max-width: 100%;
 
 		&::-webkit-scrollbar {
@@ -39,6 +41,12 @@
 	}
 }
 
+.portifolioPageRoot {
+	&.dark {
+		color: var(--primary);
+	}
+}
+
 @media only screen and (min-width: 768px) {
 	.portifolioPageRoot {
 		width: 60%;
@@ -47,6 +55,7 @@
 		padding-bottom: 10rem;
 
 		> div {
+			padding: 0;
 			justify-content: space-evenly;
 			align-items: center;
 			overflow-x: visible;

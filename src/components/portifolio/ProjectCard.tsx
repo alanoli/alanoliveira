@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import styles from "./projectcard.module.scss";
 
+import { useTranslation } from "react-i18next";
+
 type ProjectCardProps = {
 	title: string
 	description: string
@@ -15,13 +17,14 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
 	title,
-	description,
 	backgroundImagePath,
 	techList,
 	color,
 	id,
 	shortDescription
 }) => {
+
+	const { t } = useTranslation();
 
 	const cardButtonColors = {
 		red: "#bf3030",
@@ -50,9 +53,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					</div>
 				</div>
 				<div style={{ backgroundColor: cardButtonColors[color] }} className={styles.cardBack}>
-					<p>Details</p>
+					<p>{t("details")}</p>
 					<div>
-						<h2>Technologies</h2>
+						<h2>{t("techTitle")}</h2>
 						<section>
 							{techList.map((item, i) => {
 								return (
@@ -62,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						</section>
 					</div>
 					<Link href={`/projects/${id}`}>
-						<span style={{ backgroundColor: cardColors[color] }} className={styles.seeMoreButton}>See more !</span>
+						<span style={{ backgroundColor: cardColors[color] }} className={styles.seeMoreButton}>{t("seeMore")}</span>
 					</Link>
 				</div>
 			</div>

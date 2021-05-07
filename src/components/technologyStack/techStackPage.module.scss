@@ -17,6 +17,12 @@
 	}
 }
 
+.technologyStackRoot {
+	&.dark {
+		color: var(--primary);
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.technologyStackRoot {
 		width: 100vw;

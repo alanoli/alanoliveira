@@ -9,6 +9,8 @@ import MailLogo from "@material-ui/icons/Mail";
 
 import styles from "./footerpage.module.scss";
 
+import { useTranslation } from "react-i18next";
+
 import { useCopyToClipboard } from "../../utils/hooks";
 
 const FooterPage: React.FC = () => {
@@ -17,6 +19,8 @@ const FooterPage: React.FC = () => {
 		copyToClipboard,
 		CopiedToast
 	} = useCopyToClipboard();
+
+	const { t } = useTranslation();
 
 	return (
 		<div className={styles.footerPageRoot}>
@@ -29,7 +33,7 @@ const FooterPage: React.FC = () => {
 					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.whatsApp, "_blanck")}><WhatsAppLogo className={styles.wppIcon} /></div>
 					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.linkedIn, "_blanck")}><LinkedInLogo className={styles.linkedInIcon} /></div>
 					<div onClick={() => window.open(SOCIAL_MEDIA_LINKS.gitHub, "_blanck")}><GithubLogo className={styles.githubIcon} /></div>
-					<div onClick={() => copyToClipboard("Email copied!", SOCIAL_MEDIA_LINKS.email)}><MailLogo className={styles.githubIcon} /></div>
+					<div onClick={() => copyToClipboard(t("emailCopied"), SOCIAL_MEDIA_LINKS.email)}><MailLogo className={styles.githubIcon} /></div>
 				</div>
 				<p className="footer-ref">Alan Oliveira @ 2021</p>
 			</div>

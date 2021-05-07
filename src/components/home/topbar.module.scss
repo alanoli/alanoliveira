@@ -6,6 +6,19 @@
 	padding: 20px 20px;
 	color: var(--terciary);
 
+	display: flex;
+	align-items: center;
+
+	.darkMode {
+		margin-right: 2rem;
+		cursor: pointer;
+	}
+
+	> div {
+		margin-right: 2rem;
+		width: 5rem;
+	}
+
 	.topBarIcon {
 		cursor: pointer;
 		transition: transform 0.3s;
@@ -28,5 +41,23 @@
 		}
 
 		transition: transform 0.2s;
+	}
+}
+
+.topBarRoot {
+	&.dark {
+		color: var(--primary);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.topBarRoot {
+		.darkMode {
+			margin-right: 5rem;
+		}
+
+		> div {
+			margin-right: 5rem;
+		}
 	}
 }

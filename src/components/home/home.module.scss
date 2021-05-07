@@ -42,6 +42,12 @@
 	}
 }
 
+.homeRoot {
+	&.dark .homeContent {
+		color: var(--primary);
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.homeRoot {
 		max-width: 100vw;

@@ -2,19 +2,22 @@ import React from "react";
 
 import styles from "./aboutpage.module.scss";
 
+import { useThemeContext } from "../../contexts/ThemeContext";
+import { Themes } from "../../utils/enums";
+import { useTranslation } from "react-i18next";
+
 const AboutPage: React.FC = () => {
+
+	const { t } = useTranslation();
+	const { theme } = useThemeContext();
+
 	return (
-		<div className={styles.aboutPageRoot}>
-			<h1>About me</h1>
+		<div className={`${styles.aboutPageRoot} ${theme === Themes.DARK ? styles.dark : ""}`}>
+			<h1>{t("aboutTitle")}</h1>
 			<section>
 				<img src={"/authorImage.png"} alt="" className="author-image" />
 				<p className="description">
-					{`I live in Minas Gerais, Brazil.
-					Currently graduating in Software Engineering.
-					I’ve been working with IT in a company for
-					more then 4 years now.
-					Have experiences with software development
-					outside company, such as a freelancer.`}
+					{t("aboutMeDescription")}
 				</p>
 			</section>
 		</div>

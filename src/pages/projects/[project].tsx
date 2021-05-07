@@ -4,10 +4,15 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { projectList } from "../../assets/projects";
+import TopBar from "../../components/home/TopBar";
 
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkIcon from "@material-ui/icons/Link";
+
+import { useTranslation } from "react-i18next";
+import { useThemeContext } from "../../contexts/ThemeContext";
+import { Themes } from "../../utils/enums";
 
 import styles from "./project.module.scss";
 
@@ -28,27 +33,32 @@ const ProjectPage: React.FC<ProjectProps> = ({
 	sourceCodeUrl,
 	linkUrl
 }) => {
+
+	const { t } = useTranslation();
+	const { theme } = useThemeContext();
+
 	return (
 		<>
 			<Head>
 				<title>{`Alan Oli | ${title}`}</title>
 			</Head>
-			<section className={styles.projectPageRoot}>
-				<nav>
+			<section className={`${styles.projectPageRoot} ${theme === Themes.DARK ? styles.dark : ""}`}>
+				<TopBar />
+				{/* <nav>
 					<Link href="/">
 						<button>
 							<ArrowBackIcon />
-							<h1>Portfolio</h1>
+							<h1>{t("portfolioTitle")}</h1>
 						</button>
 					</Link>
-				</nav>
-				<div>
+				</nav> */}
+				<div className={styles.projectDetails}>
 					<h1>{title}</h1>
 					<section className={styles.gifContainer}>
 						<img src={projectGif} alt="" />
 					</section>
 					<section className={styles.descriptionContainer}>
-						<p>{description}</p>
+						<p>{t(description)}</p>
 						<div>
 							{techList.map((item, index) => {
 								return (
@@ -80,6 +90,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+
 	const currentProject = projectList.find((item) => {
 		if (item.id == context.params.project) {
 			return true;

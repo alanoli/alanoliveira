@@ -1,47 +1,49 @@
 .projectPageRoot {
 	display: flex;
 	flex-direction: column;
+
 	width: 100vw;
+	position: relative;
 
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 
-	nav {
-		height: 5rem;
-		// background: var(--quaternary);
-		border-bottom: solid 1px var(--gray-200);
+	// nav {
+	// 	height: 5rem;
+	// 	// background: var(--quaternary);
+	// 	border-bottom: solid 1px var(--gray-200);
 
-		&:hover {
-			cursor: default;
-		}
+	// 	&:hover {
+	// 		cursor: default;
+	// 	}
 
-		padding: 2rem;
-		display: flex;
-		align-items: center;
+	// 	padding: 2rem;
+	// 	display: flex;
+	// 	align-items: center;
 
-		// box-shadow: 0px 4px 4px rgb(112, 112, 112);
+	// 	// box-shadow: 0px 4px 4px rgb(112, 112, 112);
 
-		button {
-			border-radius: 10px;
-			background-color: var(--blue);
-			padding: 0.5rem 2rem;
+	// 	button {
+	// 		border-radius: 10px;
+	// 		background-color: var(--blue);
+	// 		padding: 0.5rem 2rem;
 
-			box-shadow: 0px 4px 4px rgb(151, 151, 151);
+	// 		box-shadow: 0px 4px 4px rgb(151, 151, 151);
 
-			display: flex;
-			align-items: center;
+	// 		display: flex;
+	// 		align-items: center;
 
-			h1,
-			svg {
-				color: var(--gray-800);
-			}
+	// 		h1,
+	// 		svg {
+	// 			color: var(--gray-800);
+	// 		}
 
-			h1 {
-				margin-left: 1rem;
-			}
-		}
-	}
+	// 		h1 {
+	// 			margin-left: 1rem;
+	// 		}
+	// 	}
+	// }
 
-	> div {
+	.projectDetails {
 		flex: auto;
 		width: 100%;
 
@@ -120,6 +122,12 @@
 	}
 }
 
+.projectPageRoot {
+	&.dark div h1 {
+		color: var(--primary);
+	}
+}
+
 @media only screen and (min-width: 768px) {
 	.projectPageRoot {
 		height: calc(100vh - 5rem);
@@ -128,13 +136,14 @@
 			cursor: pointer;
 		}
 
-		> div {
+		.projectDetails {
 			flex-direction: row;
 			gap: 2rem;
 
 			width: 80%;
 			height: 100%;
 			margin: auto;
+			margin-top: 78px;
 			position: relative;
 
 			padding: 7rem;

@@ -6,6 +6,10 @@ import HomeLandingAnimation from "../../components/home/HomeLandingAnimation";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import { useTranslation } from "react-i18next";
+
+import { useThemeContext } from "../../contexts/ThemeContext";
+import { Themes } from "../../utils/enums";
 import styles from "./home.module.scss";
 
 type HomePageProps = {
@@ -17,9 +21,12 @@ const HomePage: React.FC<HomePageProps> = ({ onClickRef }) => {
 	const [pageScrolled, setPageScrolled] = useState(false);
 	const topRef = useRef(null);
 
+	const { theme } = useThemeContext();
+
+	const { t, i18n } = useTranslation();
+
 	const handleScroll = () => {
 		const offset = window.scrollY;
-		console.log(offset);
 		if (offset >= 1000) {
 			setPageScrolled(true);
 		} else {
@@ -28,13 +35,13 @@ const HomePage: React.FC<HomePageProps> = ({ onClickRef }) => {
 	};
 
 	useEffect(() => {
-		typeWriter("Hi, I'm Alan", "home-title", () => typeWriter("I code ideas into software", "home-subtitle", ""));
+		typeWriter(t("homeSentence1"), "home-title", () => typeWriter(t("homeSentence2"), "home-subtitle", ""));
 
 		window.addEventListener("scroll", handleScroll);
 		return () => {
 			window.removeEventListener("scroll", () => handleScroll);
 		};
-	}, []);
+	}, [i18n.language]);
 
 	const typeWriter = (text: string, className: string, callBack, currentLetterPosition = 0) => {
 		if (currentLetterPosition < (text.length)) {
@@ -50,7 +57,7 @@ const HomePage: React.FC<HomePageProps> = ({ onClickRef }) => {
 	};
 
 	return (
-		<div ref={topRef} className={styles.homeRoot}>
+		<div ref={topRef} className={`${styles.homeRoot} ${theme === Themes.DARK ? styles.dark : ""}`}>
 			<TopBar />
 			<div className={styles.homeContent}>
 				<div className={styles.introText}>
@@ -59,7 +66,7 @@ const HomePage: React.FC<HomePageProps> = ({ onClickRef }) => {
 				</div>
 				<HomeLandingAnimation />
 				<div className={styles.bottomLearnMore} onClick={onClickRef}>
-					<p>Learn more about what I do</p>
+					<p>{t("aboutWhatIDo")}</p>
 					<ExpandMoreIcon className={styles.expandIcon} />
 				</div>
 			</div>
