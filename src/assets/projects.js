@@ -14,7 +14,7 @@ export const projectList = [
 		"color": "red",
 		"backgroundImagePath": "/project_header_div_red.svg",
 		"projectGif": "/tricacau.gif",
-		"sourceCodeUrl": "",
+		"sourceCodeUrl": "https://github.com/alanoli/tricacauweb",
 		"linkUrl": ""
 	},
 	{
@@ -31,7 +31,7 @@ export const projectList = [
 		"backgroundImagePath": "/project_header_div_green.svg",
 		"projectGif": "/mrgelado.gif",
 		"sourceCodeUrl": "https://github.com/alanoli/loja_mr_gelado",
-		"linkUrl": "https://github.com/alanoli/loja_mr_gelado"
+		"linkUrl": "https://www.mrgelado.com/"
 	},
 	{
 		"id": "podcastr",
@@ -48,7 +48,7 @@ export const projectList = [
 		"color": "blue",
 		"backgroundImagePath": "/project_header_div_blue.svg",
 		"projectGif": "/podcastr.gif",
-		"sourceCodeUrl": "",
+		"sourceCodeUrl": "https://github.com/alanoli/podcaster",
 		"linkUrl": ""
 	},
 	{
@@ -64,7 +64,7 @@ export const projectList = [
 		"color": "brown",
 		"backgroundImagePath": "/project_header_div_brown.svg",
 		"projectGif": "/bethehero.gif",
-		"sourceCodeUrl": "",
+		"sourceCodeUrl": "https://github.com/alanoli/be-the-hero",
 		"linkUrl": ""
 	}
 ];
