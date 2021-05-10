@@ -48,7 +48,7 @@ const HomePage: React.FC<HomePageProps> = ({ onClickRef }) => {
 			document.getElementsByClassName(className)[0].innerHTML = text.substring(0, currentLetterPosition + 1);
 			setTimeout(() => {
 				typeWriter(text, className, callBack, currentLetterPosition + 1);
-			}, 100);
+			}, 50);
 		} else if (typeof callBack == "function") {
 			setTimeout(() => {
 				callBack();
