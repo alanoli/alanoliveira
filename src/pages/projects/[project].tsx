@@ -67,8 +67,8 @@ const ProjectPage: React.FC<ProjectProps> = ({
 							})}
 						</div>
 						<span>
-							<button onClick={() => window.open(sourceCodeUrl, "_blank")}><GitHubIcon />Source Code</button>
-							<button onClick={() => window.open(linkUrl, "_blank")}><LinkIcon />Project URL</button>
+							<button onClick={() => window.open(sourceCodeUrl, "_blank")}><GitHubIcon />{t("sourceCode")}</button>
+							<button onClick={() => window.open(linkUrl, "_blank")}><LinkIcon />{t("projectUrl")}</button>
 						</span>
 					</section>
 				</div>

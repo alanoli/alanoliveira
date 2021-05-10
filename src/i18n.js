@@ -4,6 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import { TRANSLATIONS_EN } from "./locales/en/translations";
 import { TRANSLATIONS_PT } from "./locales/pt/translations";
+import { TRANSLATIONS_ES } from "./locales/es/translations";
 
 i18n
 	.use(LanguageDetector)
@@ -15,6 +16,9 @@ i18n
 			},
 			pt: {
 				translation: TRANSLATIONS_PT
+			},
+			es: {
+				translation: TRANSLATIONS_ES
 			}
 		},
 		fallbackLng: "en" //TODO: not working

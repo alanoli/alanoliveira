@@ -23,4 +23,7 @@ export const TRANSLATIONS_EN = {
 
 	projectBeTheHeroShortDescription: "Web Application that engages people on donating to abandoned animals.",
 	projectBeTheHeroDescription: "Web Application that engages people on donating to abandoned animals. It was developed as part of the Oministack Week, from Rocket Seat.",
+
+	sourceCode: "Source code",
+	projectUrl: "Project URL"
 };

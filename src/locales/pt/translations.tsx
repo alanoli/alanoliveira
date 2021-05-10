@@ -23,4 +23,7 @@ export const TRANSLATIONS_PT = {
 
 	projectBeTheHeroShortDescription: "Aplicação Web que engaja as pessoas a doarem à causas animais",
 	projectBeTheHeroDescription: "Aplicação Web que engaja pessoas a doarem à causas animais. Foi desenvolvida como parte da Semana Oministack, da Rocketseat.",
+
+	sourceCode: "Código fonte",
+	projectUrl: "URL do projeto"
 };
