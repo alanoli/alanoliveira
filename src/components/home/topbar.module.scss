@@ -1,46 +1,58 @@
 .topBarRoot {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 100%;
 
 	padding: 20px 20px;
 	color: var(--terciary);
 
-	display: flex;
-	align-items: center;
-
-	.darkMode {
-		margin-right: 2rem;
+	.arrowBack {
 		cursor: pointer;
 	}
 
-	> div {
-		margin-right: 2rem;
-		width: 5rem;
-	}
+	.topBarMenuOptions {
+		flex: auto;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
 
-	.topBarIcon {
-		cursor: pointer;
-		transition: transform 0.3s;
-		margin: 0px 5px;
-
-		&:hover {
-			transform: rotateY(360deg);
+		> div {
+			margin: 0 1rem;
+			width: 5rem;
 		}
 
-		&:hover.wppIcon {
-			color: #25d366;
+		span {
+			visibility: hidden;
 		}
 
-		&:hover.linkedInIcon {
-			color: #0077b5;
-		}
+		.topBarIcon {
+			cursor: pointer;
+			transition: transform 0.3s;
+			margin: 0px 5px;
 
-		&:hover.githubIcon {
-			color: black;
-		}
+			&:hover {
+				transform: rotateY(360deg);
+			}
 
-		transition: transform 0.2s;
+			&:hover.wppIcon {
+				color: #25d366;
+			}
+
+			&:hover.linkedInIcon {
+				color: #0077b5;
+			}
+
+			&:hover.githubIcon {
+				color: black;
+			}
+
+			transition: transform 0.2s;
+		}
 	}
 }
 
@@ -52,10 +64,11 @@
 
 @media only screen and (min-width: 768px) {
 	.topBarRoot {
-		.darkMode {
-			margin-right: 5rem;
+		.topBarMenuOptions {
+			span {
+				visibility: visible;
+			}
 		}
-
 		> div {
 			margin-right: 5rem;
 		}

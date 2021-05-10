@@ -43,7 +43,7 @@ const ProjectPage: React.FC<ProjectProps> = ({
 				<title>{`Alan Oli | ${title}`}</title>
 			</Head>
 			<section className={`${styles.projectPageRoot} ${theme === Themes.DARK ? styles.dark : ""}`}>
-				<TopBar />
+				<TopBar withArrowBack/>
 				{/* <nav>
 					<Link href="/">
 						<button>
