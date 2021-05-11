@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "./projectcard.module.scss";
+import prefixPath from "../../utils/applicationPrefixPath";
 
 import { useTranslation } from "react-i18next";
 
@@ -45,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 			<div className={styles.cardInner}>
 				<div className={styles.cardFront}>
 					<div className={styles.cardHeaderContainer}>
-						<img src={backgroundImagePath} alt="project-image" />
+						<img src={prefixPath + backgroundImagePath} alt="project-image" />
 						<h2>{title}</h2>
 					</div>
 					<div className={styles.bodyContainer}>

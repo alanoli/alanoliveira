@@ -6,9 +6,9 @@ import { useThemeContext } from "../../contexts/ThemeContext";
 import { Themes } from "../../utils/enums";
 import { useTranslation } from "react-i18next";
 
-const AboutPage: React.FC = () => {
+import prefixPath from "../../utils/applicationPrefixPath";
 
-	const prefixPath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const AboutPage: React.FC = () => {
 
 	const { t } = useTranslation();
 	const { theme } = useThemeContext();

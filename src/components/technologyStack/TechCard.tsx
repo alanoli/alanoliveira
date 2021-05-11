@@ -2,6 +2,8 @@ import React from "react";
 
 import styles from "./techcard.module.scss";
 
+import prefixPath from "../../utils/applicationPrefixPath";
+
 interface TechCardProps {
 	cardTitle: string
 	techSkillsList: string[]
@@ -18,10 +20,10 @@ const TechCard: React.FC<TechCardProps> = ({ cardTitle, techSkillsList, srcLogo 
 						return <p key={i}>{item}</p>;
 					})
 				}
-				<img src="/glass.png" alt="" className={styles.glass} />
+				<img src={prefixPath + "/glass.png"} alt="" className={styles.glass} />
 			</div>
 			<div className={styles.bottomDiv}>
-				<img src={srcLogo} alt="" />
+				<img src={prefixPath + srcLogo} alt="" />
 			</div>
 		</div>
 	);

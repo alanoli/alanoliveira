@@ -3,6 +3,8 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
+import prefixPath from "../../utils/applicationPrefixPath";
+
 import { projectList } from "../../assets/projects";
 import TopBar from "../../components/home/TopBar";
 
@@ -47,7 +49,7 @@ const ProjectPage: React.FC<ProjectProps> = ({
 				<div className={styles.projectDetails}>
 					<h1>{title}</h1>
 					<section className={styles.gifContainer}>
-						<img src={projectGif} alt="" />
+						<img src={prefixPath + projectGif} alt="" />
 					</section>
 					<section className={styles.descriptionContainer}>
 						<p>{t(description)}</p>
