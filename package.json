@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eslint": "eslint src/**/*.{js,jsx,ts,tsx}"
+    "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "export": "next export"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
