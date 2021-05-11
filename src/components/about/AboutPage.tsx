@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 
 const AboutPage: React.FC = () => {
 
+	const prefixPath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 	const { t } = useTranslation();
 	const { theme } = useThemeContext();
 
@@ -15,7 +17,7 @@ const AboutPage: React.FC = () => {
 		<div className={`${styles.aboutPageRoot} ${theme === Themes.DARK ? styles.dark : ""}`}>
 			<h1>{t("aboutTitle")}</h1>
 			<section>
-				<img src={"/authorImage.png"} alt="" className="author-image" />
+				<img src={prefixPath + "/authorImage.png"} alt="" className="author-image" />
 				<p className="description">
 					{t("aboutMeDescription")}
 				</p>
