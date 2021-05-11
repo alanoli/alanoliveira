@@ -16,9 +16,13 @@ type UseCopyToClipboardReturn = {
 }
 
 type UseLanguageReturn = {
-	setCurrentLanguage: () => void
+	setCurrentLanguage: any
 	currentLanguage: Language
 	languageOptions: Language[]
+}
+
+type UseTypeWriterReturn = {
+	typeWriter: (text: string, className: string, callBack?: (any: any) => any, currentLetterPosition?: number) => void
 }
 
 export const useCopyToClipboard = (): UseCopyToClipboardReturn => {
@@ -60,4 +64,35 @@ export const useLanguage = (): UseLanguageReturn => {
 	}, [currentLanguage]);
 
 	return { setCurrentLanguage, currentLanguage, languageOptions };
+};
+
+export const useTypeWriter = (): UseTypeWriterReturn => {
+	const typeWriter = (text: string, className: string, callBack, currentLetterPosition = 0) => {
+		if (currentLetterPosition < (text.length)) {
+			document.getElementsByClassName(className)[0].innerHTML = text.substring(0, currentLetterPosition + 1);
+			setTimeout(() => {
+				typeWriter(text, className, callBack, currentLetterPosition + 1);
+			}, 50);
+		} else if (typeof callBack == "function") {
+			setTimeout(() => {
+				callBack();
+			}, 300);
+		}
+	};
+
+	return { typeWriter };
+};
+
+export const usePageScroll = () => {
+	const [pageScrolled, setPageScrolled] = useState(false);
+
+	const handleScroll = () => {
+		const offset = window.scrollY;
+		if (offset >= 1000) {
+			setPageScrolled(true);
+		} else {
+			setPageScrolled(false);
+		}
+	};
+	return { handleScroll, pageScrolled };
 };
