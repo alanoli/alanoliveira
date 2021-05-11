@@ -64,13 +64,11 @@
 
 @media only screen and (min-width: 768px) {
 	.topBarRoot {
+		padding: 20px 5rem;
 		.topBarMenuOptions {
 			span {
 				visibility: visible;
 			}
-		}
-		> div {
-			margin-right: 5rem;
 		}
 	}
 }

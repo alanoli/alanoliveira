@@ -43,15 +43,7 @@ const ProjectPage: React.FC<ProjectProps> = ({
 				<title>{`Alan Oli | ${title}`}</title>
 			</Head>
 			<section className={`${styles.projectPageRoot} ${theme === Themes.DARK ? styles.dark : ""}`}>
-				<TopBar withArrowBack/>
-				{/* <nav>
-					<Link href="/">
-						<button>
-							<ArrowBackIcon />
-							<h1>{t("portfolioTitle")}</h1>
-						</button>
-					</Link>
-				</nav> */}
+				<TopBar withArrowBack />
 				<div className={styles.projectDetails}>
 					<h1>{title}</h1>
 					<section className={styles.gifContainer}>

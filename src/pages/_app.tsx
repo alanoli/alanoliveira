@@ -3,6 +3,8 @@ import "../styles/globals.scss";
 
 import { ThemeContextProvider } from "../contexts/ThemeContext";
 
+import "../i18n";
+
 function MyApp({ Component, pageProps }) {
 	return (
 		<ThemeContextProvider>
