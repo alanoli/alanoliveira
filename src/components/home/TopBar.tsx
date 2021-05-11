@@ -20,7 +20,11 @@ import { useTranslation } from "react-i18next";
 
 import { useCopyToClipboard, useLanguage } from "../../utils/hooks";
 
-const TopBar: React.FC = ({ withArrowBack }) => {
+type TopBarProps = {
+	withArrowBack: boolean
+}
+
+const TopBar: React.FC<TopBarProps> = ({ withArrowBack }) => {
 
 	const {
 		copyToClipboard,
@@ -31,7 +35,7 @@ const TopBar: React.FC = ({ withArrowBack }) => {
 		setCurrentLanguage,
 		currentLanguage,
 		languageOptions
-	} = useLanguage({ value: "en", label: "EN" });
+	} = useLanguage();
 
 	const { t } = useTranslation();
 

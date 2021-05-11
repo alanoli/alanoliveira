@@ -9,21 +9,17 @@ type Language = {
 	label: string
 }
 
-type UseLanguageProps = {
-	defaultLanguage: Language
-}
-
 type UseCopyToClipboardReturn = {
 	copyItemVisible: boolean
 	copyToClipboard: (copiedText: string, copiedData: string) => void
 	CopiedToast: React.FC
 }
 
-// type UseLanguageReturn = {
-// 	setCurrentLanguage: () => void
-// 	currentLanguage: Language
-// 	languageOptions: Language[]
-// }
+type UseLanguageReturn = {
+	setCurrentLanguage: () => void
+	currentLanguage: Language
+	languageOptions: Language[]
+}
 
 export const useCopyToClipboard = (): UseCopyToClipboardReturn => {
 
@@ -48,7 +44,7 @@ export const useCopyToClipboard = (): UseCopyToClipboardReturn => {
 	return { copyItemVisible, copyToClipboard, CopiedToast };
 };
 
-export const useLanguage = (defaultLanguage: UseLanguageProps) => {
+export const useLanguage = (): UseLanguageReturn => {
 
 	const languageOptions = [
 		{ value: "en", label: "EN" },
@@ -56,7 +52,7 @@ export const useLanguage = (defaultLanguage: UseLanguageProps) => {
 		{ value: "es", label: "ES" }
 	];
 
-	const [currentLanguage, setCurrentLanguage] = useState(defaultLanguage);
+	const [currentLanguage, setCurrentLanguage] = useState({ value: "en", label: "EN" });
 	const { i18n } = useTranslation();
 
 	useEffect(() => {
